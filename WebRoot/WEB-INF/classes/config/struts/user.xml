@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="user"  extends="struts-default">
+        <action name="SecurityCodeImageAction" class="com.rightsallocate.action.SecurityCodeImageAction">
+			<result name="success" type="stream">
+				<param name="contentType">image/jpeg</param>
+				<param name="inputName">imageStream</param>
+				<param name="bufferSize">2048</param>
+			</result>
+		</action>
+		<action name="login" class="com.rightsallocate.action.UserAction" method="login">
+			<result name="success">admin.jsp</result>
+			<result name="input">index.jsp</result>
+		</action>
+		<action name="exit" class="com.rightsallocate.action.UserAction" method="exit">
+			<result name="success">index.jsp</result>
+			<result name="input">admin.jsp</result>
+		</action>
+	</package>
+</struts>

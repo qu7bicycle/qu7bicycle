@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="qu7bicycle"
+  id="myeclipse.1422428863962"
+  context-root="/rightsallocate"
+  j2ee-spec="5.0"
+  archive="qu7bicycle.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
