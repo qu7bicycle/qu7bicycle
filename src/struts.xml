@@ -17,6 +17,5 @@
 	
 	
 	<include file="config/struts/user.xml"></include>
-	<include file="config/struts/sysproperties.xml"></include>
 
 </struts>

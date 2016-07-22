@@ -12,13 +12,5 @@
 				<param name="bufferSize">2048</param>
 			</result>
 		</action>
-		<action name="login" class="com.rightsallocate.action.UserAction" method="login">
-			<result name="success">admin.jsp</result>
-			<result name="input">index.jsp</result>
-		</action>
-		<action name="exit" class="com.rightsallocate.action.UserAction" method="exit">
-			<result name="success">index.jsp</result>
-			<result name="input">admin.jsp</result>
-		</action>
 	</package>
 </struts>
