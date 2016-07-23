@@ -11,7 +11,7 @@
 
 	<!-- spring 系统支撑类  不要动 -->
 	
-	<bean id="idao" class="com.rightsallocate.dao.IdaoImpl">
+	<bean id="idao" class="com.qu7bicycle.dao.IdaoImpl">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 	
@@ -20,7 +20,7 @@
 		<property name="pageDao" ref="pageDao"></property>
 	</bean>
 	
-	<bean id="pageDao" class="com.rightsallocate.dao.PageDaoImpl">
+	<bean id="pageDao" class="com.qu7bicycle.dao.PageDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 		<property name="dao" ref="idao"></property>
 	</bean>

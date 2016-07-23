@@ -59,12 +59,11 @@
 
 		<property name="mappingResources">
 			<list>
+				<value>config/hibernate/hbm/School.hbm.xml</value>
+				<value>config/hibernate/hbm/Major.hbm.xml</value>
 				<value>config/hibernate/hbm/User.hbm.xml</value>
-				<value>config/hibernate/hbm/Organization.hbm.xml</value>
-				<value>config/hibernate/hbm/Function.hbm.xml</value>
-				<value>config/hibernate/hbm/Resource.hbm.xml</value>
-				<value>config/hibernate/hbm/Role.hbm.xml</value>
-				<value>config/hibernate/hbm/SysProperties.hbm.xml</value>
+				<value>config/hibernate/hbm/Bicycle.hbm.xml</value>
+				<value>config/hibernate/hbm/Log.hbm.xml</value>
 			</list>
 		</property>
 	</bean>
