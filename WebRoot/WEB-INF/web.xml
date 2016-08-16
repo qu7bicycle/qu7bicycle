@@ -33,4 +33,7 @@
     <filter-name>struts2</filter-name>
     <url-pattern>*.jsp</url-pattern>
   </filter-mapping>
+  <welcome-file-list>
+  <welcome-file>qu7_index.jsp</welcome-file>
+  </welcome-file-list>
 </web-app>
