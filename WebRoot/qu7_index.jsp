@@ -1,4 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
@@ -33,7 +35,7 @@
 	<div class="container" >
 		<div class="col-md-12" >
 			<form class="form-horizontal templatemo-login-form-2" role="form" style="margin-top: 40px;height: 500px"
-				action="#" method="post">
+				action="<%=request.getContextPath()%>/loginAction_login.action" method="post">
 				<div class="row">
 					<div class="col-md-12">
 						<img src="images/logo1.png" width="220px">
@@ -46,8 +48,8 @@
 							<div class="col-md-12">
 								<label for="username" class="control-label">手机号</label>
 								<div class="templatemo-input-icon-container">
-									<i class="fa fa-user"></i> <input type="text"
-										class="form-control" id="username" placeholder="">
+									<i class="fa fa-user"></i> 
+									<input type="text" class="form-control" name="form_User.phone" id="username" placeholder="">
 								</div>
 							</div>
 						</div>
@@ -55,9 +57,10 @@
 							<div class="col-md-12">
 								<label for="username" class="control-label">验证码</label>
 								<div class="templatemo-input-icon-container">
-									<i class="fa fa-lock"></i> <input type="password"
-										style="width: 200px" class="form-control" id="password"
-										placeholder="">
+									<i class="fa fa-lock"></i>
+									<input type="text" style="width: 200px" class="form-control" id="password"
+										placeholder="" name="verifyCode">
+									<img alt="点击切换" src="<%=request.getContextPath()%>/SecurityCodeImageAction.action">
 								</div>
 							</div>
 						</div>
@@ -66,7 +69,7 @@
 								<label for="password" class="control-label">短信验证码</label>
 								<div class="templatemo-input-icon-container">
 									<i class="fa fa-lock"></i> <input type="password"
-										class="form-control" id="password" placeholder="">
+										class="form-control" id="password" name="form_User.pwd" placeholder="">
 								</div>
 							</div>
 						</div>

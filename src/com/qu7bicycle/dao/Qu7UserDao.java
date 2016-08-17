@@ -1,5 +1,7 @@
 package com.qu7bicycle.dao;
 
-public class Qu7UserDao {
+import com.qu7bicycle.model.User;
+
+public class Qu7UserDao{
 
 }

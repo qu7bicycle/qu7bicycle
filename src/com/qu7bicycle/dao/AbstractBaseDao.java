@@ -6,8 +6,7 @@ import javax.annotation.Resource;
 
 import com.qu7bicycle.common.GetEntityClassUtil;
 
-public abstract class AbstractBaseDao<T, PK extends Serializable> implements
-		BaseDao<T, PK> {
+public abstract class AbstractBaseDao<T, PK extends Serializable> implements BaseDao<T, PK> {
 	
 	@Resource
 	private Idao<T, PK> iDao;

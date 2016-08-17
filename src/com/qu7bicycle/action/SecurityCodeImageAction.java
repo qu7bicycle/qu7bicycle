@@ -3,13 +3,18 @@ package com.qu7bicycle.action;
 import java.io.ByteArrayInputStream;
 import java.util.Map;
 
+import org.apache.struts2.interceptor.SessionAware;
+
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.qu7bicycle.common.SecurityCode;
 import com.qu7bicycle.common.SecurityImage;
 
-public class SecurityCodeImageAction extends ActionSupport {
+public class SecurityCodeImageAction extends ActionSupport implements SessionAware{
+	private static final long serialVersionUID = -2610219351327673424L;
 
+	private Map<String,Object> sessionMap;
+	
 	// 图片流
 	private ByteArrayInputStream imageStream;
 	private String timestamp;// 得到时间戳
@@ -33,12 +38,19 @@ public class SecurityCodeImageAction extends ActionSupport {
 
 	@Override
 	public String execute() throws Exception {
-		// 获取默认难度和长度的验证码
-		String securityCode = SecurityCode.getSecurityCode();
-		imageStream = SecurityImage.getImageAsInputStream(securityCode);
-		// 放入session中
-		Map session = ActionContext.getContext().getSession();
-		session.put("checkCode", securityCode);
+		try{
+			// 获取默认难度和长度的验证码
+			String securityCode = SecurityCode.getSecurityCode();
+			imageStream = SecurityImage.getImageAsInputStream(securityCode);
+			// 放入session中
+			sessionMap.put("checkCode", securityCode);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 		return SUCCESS;
+	}
+
+	public void setSession(Map<String, Object> arg0) {
+		 sessionMap = arg0;
 	}
 }
