@@ -40,7 +40,7 @@
 				<div class="row" align="center">
 					<div class="form-group" style="width: 250px;">
 						<div class="col-md-12">
-							<a href="./qu7_personInfo.jsp"><input type="button"
+							<a href="<%=request.getContextPath()%>/userAction_toPersonInfo.action"><input type="button"
 								style="font-size: 18px;font-family: '楷体'"
 								value="个&nbsp;人&nbsp;信&nbsp;息" class="btn btn-warning"></a>
 

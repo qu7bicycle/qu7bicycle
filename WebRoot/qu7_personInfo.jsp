@@ -1,4 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
@@ -49,7 +51,7 @@
 
 				<div class="form-group">
 					<div class="col-md-12">
-						<label for="name" class="control-label">手机号 ：</label> 150150150
+						<label for="name" class="control-label">手机号 ：</label> ${sessionScope.user.phone}
 						<div class="templatemo-input-icon-container">
 							<!-- 	<i class="fa fa-user"></i> -->
 							<!--  <input type="text"
@@ -59,7 +61,7 @@
 				</div>
 				<div class="form-group">
 					<div class="col-md-12">
-						<label for="name" class="control-label">账户余额：</label> 1000.50 <input
+						<label for="name" class="control-label">账户余额：</label> ${sessionScope.user.money} <input
 							type="submit" value="充值" class="btn btn-success pull-right">
 						<div class="templatemo-input-icon-container">
 							<!-- 	<i class="fa fa-user"></i> -->
@@ -79,7 +81,15 @@
 		        </div> -->
 				<div class="form-group">
 					<div class="col-md-12">
-						<label for="website" class="control-label">学校 ：</label>待认证
+						<label for="website" class="control-label">学校 ：</label>
+						<c:choose>
+							<c:when test="${sessionScope.user.school != null}">
+								${sessionScope.user.school.name}
+							</c:when>
+							<c:otherwise>
+								待认证
+							</c:otherwise>
+						</c:choose>
 						<div class="templatemo-input-icon-container">
 							<!-- <i class="fa fa-globe"></i> <input type="text"
 								class="form-control" id="website" placeholder=""> -->
@@ -90,7 +100,15 @@
 
 				<div class="form-group">
 					<div class="col-md-12">
-						<label for="subject" class="control-label">专业 ：</label>待认证
+						<label for="subject" class="control-label">专业 ：</label>
+						<c:choose>
+							<c:when test="${sessionScope.user.major != null}">
+								${sessionScope.user.major.name}
+							</c:when>
+							<c:otherwise>
+								待认证
+							</c:otherwise>
+						</c:choose>
 						<div class="templatemo-input-icon-container">
 							<!-- <i class="fa fa-info-circle"></i> <input type="text"
 								class="form-control" id="subject" placeholder=""> -->

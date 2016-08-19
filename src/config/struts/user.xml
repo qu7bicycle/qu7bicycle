@@ -15,6 +15,13 @@
 		
         <action name="loginAction_*" class="com.qu7bicycle.action.LoginAction" method="{1}">
         	<result name="login_success">/qu7_display.jsp</result>
+        	<result name="login_fail">/qu7_index.jsp</result>
 		</action>
+		
+        <action name="userAction_*" class="com.qu7bicycle.action.UserAction" method="{1}">
+        	<result name="toPersonInfo">/qu7_personInfo.jsp</result>
+		</action>
+		
+		
 	</package>
 </struts>

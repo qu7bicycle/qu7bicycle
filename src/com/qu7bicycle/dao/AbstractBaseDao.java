@@ -13,8 +13,6 @@ public abstract class AbstractBaseDao<T, PK extends Serializable> implements Bas
 	@Resource(name="pageDao")
 	private PageDaoImpl pageDao;
 	
-	
-	
 	public PageDaoImpl getPageDao() {
 		return pageDao;
 	}

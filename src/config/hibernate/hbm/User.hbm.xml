@@ -34,10 +34,10 @@
 		<property name="description" type="java.lang.String">
 			<column name="description" length="20" />
 		</property>
-		<many-to-one name="school" class="com.qu7bicycle.model.School">
+		<many-to-one name="school" class="com.qu7bicycle.model.School" lazy="false">
              <column name="sid"></column>
         </many-to-one>
-        <many-to-one name="major" class="com.qu7bicycle.model.Major">
+        <many-to-one name="major" class="com.qu7bicycle.model.Major" lazy="false">
              <column name="mid"></column>
         </many-to-one>
         <set name="logSet" inverse="true" >

@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.qu7bicycle.exception.UserException;
+import com.qu7bicycle.model.Major;
+import com.qu7bicycle.model.School;
 import com.qu7bicycle.model.User;
 import com.qu7bicycle.service.UserService;
 
@@ -31,20 +33,30 @@ public class LoginAction extends ActionSupport implements RequestAware,SessionAw
 	 * @date 2016年8月16日
 	 */
 	public String login(){
-		//1.判断是否验证码正确
-		if(verifyCode == null || !verifyCode.equals(sessionMap.get("checkCode"))){
-			requestMap.put("msg", "验证码错误");
-			return "login_fail";
-		}
+		System.out.println("LoginAction_login");
+//		//1.判断是否验证码正确
+//		if(verifyCode == null || !verifyCode.equals(sessionMap.get("checkCode"))){
+//			requestMap.put("msg", "验证码错误");
+//			return "login_fail";
+//		}
 		//2.对用户的手机号和密码进行登陆
-		try {
-			User db_User = userService.login(form_User.getPhone(),form_User.getPwd());
+//		try {
+//			User db_User = userService.login(form_User.getPhone(),form_User.getPwd());
+			User db_User = new User();
+			db_User.setPhone("123131");
+			db_User.setMoney(1000);
+			School school = new School();
+			school.setName("恒大");
+			db_User.setSchool(school);
+			Major major = new Major();
+			major.setName("计算机");
+			db_User.setMajor(major);
 			sessionMap.put("user", db_User);
 			return "login_success";
-		} catch (UserException e) {
-			requestMap.put("msg", e.getMessage());
-			return "login_fail";
-		}
+//		} catch (UserException e) {
+//			requestMap.put("msg", e.getMessage());
+//			return "login_fail";
+//		}
 	}
 
 	public User getForm_User() {
