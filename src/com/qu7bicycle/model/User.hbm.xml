@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.qu7bicycle.model.User" table="user">
+		<id name="id" type="java.lang.Integer">
+			<generator class="native" />
+		</id>
+		<property name="name" type="java.lang.String">
+			<column name="name" length="20" />
+		</property>
+		<property name="pwd" type="java.lang.String">
+			<column name="pwd" length="32" />
+		</property>
+		<property name="phone" type="java.lang.String">
+			<column name="phone" length="20" />
+		</property>
+		<property name="sex" type="java.lang.Integer">
+		</property>
+		<property name="created" type="java.lang.String">
+			<column name="created" length="20" />
+		</property>
+		<property name="lasted" type="java.lang.String">
+			<column name="lasted" length="20" />
+		</property>
+		<property name="money" type="java.lang.Double">
+		</property>
+		<property name="available" type="java.lang.Boolean">
+		</property>
+		<property name="login_times" type="java.lang.Integer">
+		</property>
+		<property name="authenticated" type="java.lang.Boolean">
+		</property>
+		<property name="description" type="java.lang.String">
+			<column name="description" length="20" />
+		</property>
+		<many-to-one name="school" class="com.qu7bicycle.model.School" lazy="false">
+             <column name="sid"></column>
+        </many-to-one>
+        <many-to-one name="major" class="com.qu7bicycle.model.Major" lazy="false">
+             <column name="mid"></column>
+        </many-to-one>
+        <set name="logSet" inverse="true" >
+          <key>
+          	<column name="uid"></column>
+          </key>
+          <one-to-many class="com.qu7bicycle.model.Log"/>
+        </set>
+	</class>
+
+</hibernate-mapping>
