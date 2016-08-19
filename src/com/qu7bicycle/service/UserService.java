@@ -36,9 +36,9 @@ public class UserService {
 			qu7UserDao.save(db_User);
 		}
 		//3.比较电话验证短息和用户填写验证是是否一致
-		if(!formCode.equals(trueCode)){
-			throw new UserException("短信验证码错误");
-		}
+//		if(!formCode.equals(trueCode)){
+//			throw new UserException("短信验证码错误");
+//		}
 		return db_User;
 	}
 

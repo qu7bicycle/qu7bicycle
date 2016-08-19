@@ -72,6 +72,14 @@ public class LoginAction extends ActionSupport implements RequestAware,SessionAw
 		this.verifyCode = verifyCode;
 	}
 
+	public String getFormMessageCode() {
+		return formMessageCode;
+	}
+
+	public void setFormMessageCode(String formMessageCode) {
+		this.formMessageCode = formMessageCode;
+	}
+
 	public void setSession(Map<String, Object> arg0) {
 		sessionMap = arg0;
 	}

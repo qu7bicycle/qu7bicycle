@@ -12,7 +12,7 @@ import java.util.Set;
 
 public class User implements Serializable {
 	
-	private String id;
+	private Integer id;
 	private String name;
 	private String pwd;
 	private School school;
@@ -35,10 +35,11 @@ public class User implements Serializable {
 	public void setLogSet(Set<Log> logSet) {
 		this.logSet = logSet;
 	}
-	public String getId() {
+
+	public Integer getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getName() {

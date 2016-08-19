@@ -19,7 +19,7 @@ public class Qu7UserDao extends BaseDAO<User>{
 	public User getUserByPhone(String phone){
 		String hql = "FROM User WHERE phone =?";
 		Query query = getSession().createQuery(hql);
-		query.setParameter(1, phone);
+		query.setParameter(0, phone);
 		List<User> list = query.list();
 		return list.size()==0?null:list.get(0);
 	}
