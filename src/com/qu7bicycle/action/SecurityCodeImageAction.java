@@ -4,12 +4,17 @@ import java.io.ByteArrayInputStream;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Controller;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.qu7bicycle.common.SecurityCode;
 import com.qu7bicycle.common.SecurityImage;
 
+
+@Controller
+@Scope("prototype")
 public class SecurityCodeImageAction extends ActionSupport implements SessionAware{
 	private static final long serialVersionUID = -2610219351327673424L;
 

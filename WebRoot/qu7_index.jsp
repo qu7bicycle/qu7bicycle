@@ -46,7 +46,7 @@
 						style="margin-left: 30px;border: 0;">
 						<div class="form-group">
 							<div class="col-md-12">
-								<label for="username" class="control-label">手机号</label>
+								<label for="username" class="control-label">手机号</label> <span style="color:red">${msg }</span>
 								<div class="templatemo-input-icon-container">
 									<i class="fa fa-user"></i> 
 									<input type="text" class="form-control" name="form_User.phone" id="username" placeholder="">
@@ -69,7 +69,7 @@
 								<label for="password" class="control-label">短信验证码</label>
 								<div class="templatemo-input-icon-container">
 									<i class="fa fa-lock"></i> <input type="password"
-										class="form-control" id="password" name="form_User.pwd" placeholder="">
+										class="form-control" id="password" name="formMessageCode" placeholder="">
 								</div>
 							</div>
 						</div>

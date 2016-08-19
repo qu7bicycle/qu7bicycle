@@ -1,13 +1,14 @@
 package com.qu7bicycle.dao;
 
-import java.io.Serializable;
 import java.util.List;
 
 import org.hibernate.Query;
+import org.springframework.stereotype.Repository;
 
 import com.qu7bicycle.model.User;
 
-public class Qu7UserDao extends IdaoImpl<User, Serializable>{
+@Repository
+public class Qu7UserDao extends BaseDAO<User>{
 	
 	/**
 	 * 根据用户的手机号返回用户

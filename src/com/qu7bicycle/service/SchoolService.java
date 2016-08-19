@@ -1,8 +1,9 @@
 package com.qu7bicycle.service;
 
-import com.qu7bicycle.dao.BaseDao;
-import com.qu7bicycle.model.School;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-public interface SchoolService extends BaseDao<School, Integer> {
+@Service
+public class SchoolService {
 
 }

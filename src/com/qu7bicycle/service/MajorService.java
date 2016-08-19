@@ -1,8 +1,8 @@
 package com.qu7bicycle.service;
 
-import com.qu7bicycle.dao.BaseDao;
-import com.qu7bicycle.model.Major;
+import org.springframework.stereotype.Service;
 
-public interface MajorService extends BaseDao<Major, Integer> {
+@Service
+public class MajorService {
 
 }

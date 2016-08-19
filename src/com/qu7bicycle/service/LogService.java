@@ -1,8 +1,8 @@
 package com.qu7bicycle.service;
 
-import com.qu7bicycle.dao.BaseDao;
-import com.qu7bicycle.model.Log;
+import org.springframework.stereotype.Service;
 
-public interface LogService extends BaseDao<Log, Integer> {
+@Service
+public class LogService {
 
 }

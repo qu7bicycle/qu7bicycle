@@ -4,11 +4,14 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.SessionAware;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Controller;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.qu7bicycle.model.User;
 
-
+@Controller
+@Scope("prototype")
 public class UserAction extends ActionSupport implements RequestAware,SessionAware{
 	private static final long serialVersionUID = 2801432029987858517L;
 	
