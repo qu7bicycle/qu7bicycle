@@ -81,11 +81,17 @@
 								</div>
 							</div>
 						</div> -->
-						<div class="form-group">
-							<div class="col-md-12">
+						<div class="form-group" style="clear:both">
+							<div class="col-md-12"  style="float:left">
 								<a href="./qu7_display.jsp"> <input type="button"
-									style="font-size: 18px;font-family: '楷体'"
+									style="font-size: 18px;font-family: '楷体';width: 200px"
 									value="登&nbsp;&nbsp;&nbsp;陆" class="btn btn-warning"></a>
+
+							</div>
+							<div class="col-md-12" style="float:left">
+								<a href="./qu7_index2.jsp"> <input type="button"
+									style="font-size: 18px;font-family: '楷体';width: 200px"
+									value="密码登录" class="btn btn-warning"></a>
 
 							</div>
 						</div>
